@@ -8,9 +8,8 @@
 <body>
     <h1>Calculo del area de un triangulo</h1>
     <button onclick="pideDatosTriangulo()">Area Triangulo (pide Datos)</button>
-    <button onclick="leeDatos()"></button>
-    <button onclick="MRUA()"></button>
-    <button onclick="leerDatosMRUA()"></button>
+    <button onclick="leeDatos()">Leer datos triangulo</button>
+    <button onclick="leerDatosMRUA()">leer datos mrua</button>
     <p id="display"></p>
     <label for="base">Base</label>
     <input type="text" id="base">
@@ -36,7 +35,7 @@
         function leeDatos(){
             const base = document.getElementById('base').value;;
             const altura = document.getElementById('altura').value;
-            document.getElementById('altura').innerHTML = 
+            document.getElementById('display').innerHTML = 
             '<h2>El área es ' + areaTriangulo(base, altura) + '</h2>';
         }
         function mrua(a,t){
@@ -45,6 +44,7 @@
         function leerDatosMRUA(){
             const a = document.getElementById('aceleracion').value;
             const t = document.getElementById('tiempo').value;
+            document.getElementById('display2').innerHTML = 
             '<h2>El mrua es ' + mrua(a, t) + '</h2>';
         }
     </script>
