@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculo del area de un triangulo</h1>
+    <button onclick="pideDatosTriangulo()">Area Triangulo (pide Datos)</button>
+    <button onclick="leeDatos()"></button>
+    <button onclick="MRUA()"></button>
+    <button onclick="leerDatosMRUA()"></button>
+    <p id="display"></p>
+    <label for="base">Base</label>
+    <input type="text" id="base">
+
+    <label for="altura">Altura</label>
+    <input type="text" id="altura">
+    <h1>Calculo de la posición ( x ) en el MRUA</h1>
+    <p id="display2"></p>
+    <label for="aceleracion">Aceleracion</label>
+    <input type="number" id="aceleracion">
+    <label for="tiempo">Tiempo</label>
+    <input type="number" id="tiempo">
+    <script>
+        function areaTriangulo(base, altura){
+            return base*altura/2;
+
+        }
+        function pideDatosTriangulo(){
+            const base = prompt("Dime la base");
+            const altura = prompt("Dime la altura");
+            alert(areaTriangulo(base,altura));
+        }
+        function leeDatos(){
+            const base = document.getElementById('base').value;;
+            const altura = document.getElementById('altura').value;
+            document.getElementById('altura').innerHTML = 
+            '<h2>El área es ' + areaTriangulo(base, altura) + '</h2>';
+        }
+        function mrua(a,t){
+            return a*Math.pow(t,2)/2
+        }
+        function leerDatosMRUA(){
+            const a = document.getElementById('aceleracion').value;
+            const t = document.getElementById('tiempo').value;
+            '<h2>El mrua es ' + mrua(a, t) + '</h2>';
+        }
+    </script>
+</body>
+</html>
